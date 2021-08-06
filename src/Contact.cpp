@@ -21,3 +21,8 @@ void Contact::set_qso_recd(bool status) {
 
     qso_recd = status;
 }
+
+std::string Contact::get_full_addy() {
+    return their_name + ", " + their_callsign + '\n' + their_city + '\n' + their_state + ' ' + their_zip + '\n'
+    + their_country;
+}
