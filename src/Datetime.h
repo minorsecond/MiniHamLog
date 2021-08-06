@@ -22,6 +22,7 @@ public:
     Datetime(int year, int month, int day, int hour, int min, int sec)
         : year{year}, month{month}, day{day}, hour{hour}, minute{min}, second{sec} {};
     std::string get_timestamp() const ;
+    bool operator<(Datetime &dtobj) const;
 };
 
 
