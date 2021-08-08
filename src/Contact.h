@@ -6,7 +6,6 @@
 #define MINIHAMLOG_CONTACT_H
 
 #include <utility>
-
 #include "Datetime.h"
 
 class Contact {

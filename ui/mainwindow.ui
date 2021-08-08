@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>1029</width>
     <height>600</height>
    </rect>
   </property>
@@ -32,7 +32,37 @@
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="rxCall"/>
+           <widget class="QLineEdit" name="rxCallEntry"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="rxNameLabel">
+            <property name="text">
+             <string>RX Name</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="rxNameEntry"/>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="qslSentCheck">
+            <property name="text">
+             <string>QSL Sent</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="qslRecdCheck">
+            <property name="text">
+             <string>QSL Received</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout"/>
           </item>
           <item>
            <spacer name="verticalSpacer">
@@ -62,7 +92,20 @@
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="rxRST"/>
+           <widget class="QLineEdit" name="rxRSTEntry"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>TX RST</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="txRSTEdit"/>
           </item>
           <item>
            <spacer name="verticalSpacer_2">
@@ -92,7 +135,46 @@
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="rxCity"/>
+           <widget class="QLineEdit" name="rxCityEntry"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>State/Province</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="rxStateEntry"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>Country</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="rxCountryEntry"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_7">
+            <property name="text">
+             <string>Postal Code</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="postalCodeEntry"/>
           </item>
           <item>
            <spacer name="verticalSpacer_3">
@@ -111,19 +193,6 @@
         </item>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_6">
-          <item>
-           <widget class="QLabel" name="label_4">
-            <property name="text">
-             <string>State/Province</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="rxState"/>
-          </item>
           <item>
            <spacer name="verticalSpacer_4">
             <property name="orientation">
@@ -149,19 +218,6 @@
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_5">
           <item>
-           <widget class="QLabel" name="label_5">
-            <property name="text">
-             <string>Country</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="rxCountry"/>
-          </item>
-          <item>
            <spacer name="verticalSpacer_5">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
@@ -186,7 +242,58 @@
        </layout>
       </item>
       <item row="2" column="0">
-       <widget class="QTableWidget" name="tableView"/>
+       <widget class="QTableWidget" name="tableView">
+        <column>
+         <property name="text">
+          <string>Date &amp; Time</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Call</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Name</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>RX RST</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>TX RST</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>City</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>State</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Postal Code</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>QSL Sent</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>QSL Rec</string>
+         </property>
+        </column>
+       </widget>
       </item>
      </layout>
     </item>
@@ -197,7 +304,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>1029</width>
      <height>24</height>
     </rect>
    </property>
