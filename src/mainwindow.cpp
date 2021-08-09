@@ -53,6 +53,4 @@ void MainWindow::submit_button_clicked() {
             ui->postalCodeEntry->text().toStdString(),
             ui->rxCountryEntry->text().toStdString()
             );
-
-    std::cout << new_contact.get_full_addy() << '\n' << new_contact.get_datetime() << std::endl;
 }

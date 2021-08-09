@@ -4,6 +4,7 @@
 
 #include "Datetime.h"
 #include "Utilities.h"
+#include <iostream>
 
 std::string Datetime::get_timestamp() const {
     const std::string zp_month {Utilities::zero_pad_integer(2, month)};
@@ -38,6 +39,20 @@ bool Datetime::operator<(Datetime &dtobj) const {
         }
     }
     return false;
+}
+
+void Datetime::from_std_string(const std::string& datetime_string) {
+    /*
+     * Converts datetime from string into datetime object
+     * @param datetime_string: String in format  YYYYMMDD HH:MM:SS
+     */
+
+    year = std::stoi(datetime_string.substr(0, 4));
+    month = std::stoi(datetime_string.substr(4, 2));
+    day = std::stoi(datetime_string.substr(6, 2));
+    hour = std::stoi(datetime_string.substr(9, 2));
+    minute = std::stoi(datetime_string.substr(12, 2));
+    second = std::stoi(datetime_string.substr(15, 2));
 }
 
 Datetime::Datetime() = default;
