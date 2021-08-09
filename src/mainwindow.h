@@ -19,6 +19,9 @@ public:
     ~MainWindow() override;
 private:
     Ui::MainWindow *ui;
+
+private slots:
+    void submit_button_clicked();
 };
 
 #endif //MINIHAMLOG_MAINWINDOW_H

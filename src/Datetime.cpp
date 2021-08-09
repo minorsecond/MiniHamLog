@@ -33,7 +33,7 @@ bool Datetime::operator<(Datetime &dtobj) const {
             return true;
         } else if (month == dtobj.month && day == dtobj.day && hour == dtobj.hour && minute < dtobj.minute) {
             return true;
-        } else if (month == dtobj.month && day == dtobj.day && hour == dtobj.hour && minute == dtobj.minute && second < dtobj.minute) {
+        } else if (month == dtobj.month && day == dtobj.day && hour == dtobj.hour && minute == dtobj.minute && second < dtobj.second) {
             return true;
         }
     }
