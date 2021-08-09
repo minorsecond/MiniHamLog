@@ -5,6 +5,7 @@
 #include "mainwindow.h"
 #include "../ui/ui_mainwindow.h"
 #include "../src/Datetime.h"
+#include "Contact.h"
 #include <iostream>
 
 MainWindow::MainWindow(QWidget *parent)
@@ -40,4 +41,18 @@ void MainWindow::submit_button_clicked() {
 
     const Datetime datetime(year, month, day, hour, minute, second);
 
+    Contact new_contact(
+            datetime,
+            ui->rxCallEntry->text().toStdString(),
+            ui->rxRSTEntry->text().toStdString(),
+            ui->rxGridEntry->text().toStdString(),
+            ui->rxNameEntry->text().toStdString(),
+            ui->rxAddyEntry->text().toStdString(),
+            ui->rxCityEntry->text().toStdString(),
+            ui->rxStateEntry->text().toStdString(),
+            ui->postalCodeEntry->text().toStdString(),
+            ui->rxCountryEntry->text().toStdString()
+            );
+
+    std::cout << new_contact.get_full_addy() << '\n' << new_contact.get_datetime() << std::endl;
 }

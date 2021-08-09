@@ -123,6 +123,19 @@
              <enum>QFrame::Raised</enum>
             </property>
             <layout class="QGridLayout" name="gridLayout_5">
+             <item row="4" column="0">
+              <widget class="QLabel" name="label_9">
+               <property name="text">
+                <string>Grid</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLineEdit" name="txRSTEdit"/>
+             </item>
              <item row="2" column="0">
               <widget class="QLabel" name="label_6">
                <property name="text">
@@ -146,8 +159,8 @@
              <item row="1" column="0">
               <widget class="QLineEdit" name="rxRSTEntry"/>
              </item>
-             <item row="3" column="0">
-              <widget class="QLineEdit" name="txRSTEdit"/>
+             <item row="5" column="0">
+              <widget class="QLineEdit" name="rxGridEntry"/>
              </item>
             </layout>
            </widget>
@@ -178,20 +191,7 @@
              <enum>QFrame::Raised</enum>
             </property>
             <layout class="QGridLayout" name="gridLayout_6">
-             <item row="5" column="0">
-              <widget class="QLineEdit" name="rxCountryEntry"/>
-             </item>
-             <item row="2" column="0">
-              <widget class="QLabel" name="label_4">
-               <property name="text">
-                <string>State/Province</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="6" column="0">
+             <item row="8" column="0">
               <widget class="QLabel" name="label_7">
                <property name="text">
                 <string>Postal Code</string>
@@ -201,17 +201,10 @@
                </property>
               </widget>
              </item>
-             <item row="0" column="0">
-              <widget class="QLabel" name="label_3">
-               <property name="text">
-                <string>City</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-              </widget>
+             <item row="1" column="0">
+              <widget class="QLineEdit" name="rxAddyEntry"/>
              </item>
-             <item row="4" column="0">
+             <item row="6" column="0">
               <widget class="QLabel" name="label_5">
                <property name="text">
                 <string>Country</string>
@@ -221,14 +214,47 @@
                </property>
               </widget>
              </item>
-             <item row="3" column="0">
+             <item row="5" column="0">
               <widget class="QLineEdit" name="rxStateEntry"/>
              </item>
-             <item row="1" column="0">
+             <item row="7" column="0">
+              <widget class="QLineEdit" name="rxCountryEntry"/>
+             </item>
+             <item row="4" column="0">
+              <widget class="QLabel" name="label_4">
+               <property name="text">
+                <string>State/Province</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="0">
+              <widget class="QLineEdit" name="postalCodeEntry"/>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_3">
+               <property name="text">
+                <string>City</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
               <widget class="QLineEdit" name="rxCityEntry"/>
              </item>
-             <item row="7" column="0">
-              <widget class="QLineEdit" name="postalCodeEntry"/>
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_10">
+               <property name="text">
+                <string>Address</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
              </item>
             </layout>
            </widget>
