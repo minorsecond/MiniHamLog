@@ -6,6 +6,7 @@
 #define MINIHAMLOG_MAINWINDOW_H
 
 #include <QMainWindow>
+#include "Contact.h"
 
 namespace Ui {
     class MainWindow;
@@ -19,6 +20,8 @@ public:
     ~MainWindow() override;
 private:
     Ui::MainWindow *ui;
+    void write_to_db(Contact contact);
+    std::vector<Contact> read_db_rows();
 
 private slots:
     void submit_button_clicked();
