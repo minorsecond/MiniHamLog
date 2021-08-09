@@ -34,19 +34,19 @@ public:
           their_country{std::move(country)}{};
     void set_qso_sent(bool status);
     void set_qso_recd(bool status);
-    std::string get_datetime() {return contact_date.get_timestamp()};
-    std::string get_callsign() {return their_callsign};
-    std::string get_rst() {return their_rst};
-    std::string get_grid() {return their_grid};
-    std::string get_name() {return their_name};
-    std::string get_addy() {return their_addy};
-    std::string get_city() {return their_city};
-    std::string get_state() {return their_state};
-    std::string get_zip() {return their_zip};
-    std::string get_country() {return their_country};
+    std::string get_datetime() {return contact_date.get_timestamp();};
+    std::string get_callsign() {return their_callsign;};
+    std::string get_rst() {return their_rst;};
+    std::string get_grid() {return their_grid;};
+    std::string get_name() {return their_name;};
+    std::string get_addy() {return their_addy;};
+    std::string get_city() {return their_city;};
+    std::string get_state() {return their_state;};
+    std::string get_zip() {return their_zip;};
+    std::string get_country() {return their_country;};
     std::string get_full_addy();
-    bool get_qso_sent() const {return qso_sent};
-    bool get_qso_recd() const {return qso_recd};
+    bool get_qso_sent() const {return qso_sent;};
+    bool get_qso_recd() const {return qso_recd;};
 };
 
 
