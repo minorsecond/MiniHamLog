@@ -9,7 +9,9 @@
 #include "Datetime.h"
 
 class Contact {
-private:
+    friend auto initStorage(const std::string& file_name);
+
+protected:
     Datetime contact_date{};
     std::string their_callsign{};
     std::string their_rst{};
@@ -22,6 +24,7 @@ private:
     std::string their_country{};
     bool qso_sent {false};
     bool qso_recd {false};
+    size_t id{};
 
 public:
     Contact();

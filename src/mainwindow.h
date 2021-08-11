@@ -20,7 +20,7 @@ public:
     ~MainWindow() override;
 private:
     Ui::MainWindow *ui;
-    void write_to_db(Contact contact);
+    void write_to_db(Contact contact);  // TODO: This and read_db_rows() should be in separate DB class
     std::vector<Contact> read_db_rows();
 
 private slots:

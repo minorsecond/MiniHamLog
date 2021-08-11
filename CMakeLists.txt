@@ -16,7 +16,7 @@ find_package(SQLite3 REQUIRED)
 find_package(Catch2 REQUIRED)
 
 add_executable(MiniHamLog src/main.cpp src/Contact.cpp src/Contact.h src/Datetime.cpp src/Datetime.h src/Utilities.cpp
-        src/Utilities.h src/mainwindow.cpp src/mainwindow.h ui/ui_mainwindow.h include/sqlite_orm.h)
+        src/Utilities.h src/mainwindow.cpp src/mainwindow.h ui/ui_mainwindow.h include/sqlite_orm.h src/Database.cpp src/Database.h)
 
 target_link_libraries(MiniHamLog Qt6::Core Qt6::Widgets Qt6::PrintSupport Qt6::Gui SQLite3 "-framework CoreFoundation")
 
