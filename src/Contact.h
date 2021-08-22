@@ -12,7 +12,7 @@ class Contact {
     friend auto initStorage(const std::string& file_name);
 
 protected:
-    Datetime contact_date{};
+    std::string contact_date{};
     std::string their_callsign{};
     std::string their_rst{};
     std::string their_grid{};
@@ -28,16 +28,16 @@ protected:
 
 public:
     Contact();
-    Contact(Datetime qso_datetime, std::string their_call, std::string their_rst, std::string their_grid,
+    Contact(std::string qso_datetime, std::string their_call, std::string their_rst, std::string their_grid,
             std::string name, std::string addy, std::string city, std::string state, std::string zip,
             std::string country)
-        : contact_date{qso_datetime}, their_callsign{std::move(their_call)}, their_rst{std::move(their_rst)},
+        : contact_date{std::move(qso_datetime)}, their_callsign{std::move(their_call)}, their_rst{std::move(their_rst)},
           their_grid{std::move(their_grid)}, their_name{std::move(name)}, their_addy{std::move(addy)},
           their_city{std::move(city)}, their_state{std::move(state)}, their_zip{std::move(zip)},
           their_country{std::move(country)}{};
     void set_qso_sent(bool status);
     void set_qso_recd(bool status);
-    std::string get_datetime(std::string &tz) {return contact_date.get_timestamp(tz);};
+    std::string get_datetime(std::string &tz) {return contact_date;};
     std::string get_callsign() {return their_callsign;};
     std::string get_rst() {return their_rst;};
     std::string get_grid() {return their_grid;};

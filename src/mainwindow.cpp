@@ -15,7 +15,7 @@ MainWindow::MainWindow(QWidget *parent)
     /*
      * Set up the main window
      */
-
+    Database::flush_db_to_disk(storage);
     ui->setupUi(this);
     this->setFixedSize(this->width(), this->height());
 
@@ -32,6 +32,8 @@ void MainWindow::submit_button_clicked() {
      * Handles actions when user clicks the submit button
      */
 
+    std::string tz {"UTC"};
+
     const int year {std::stoi(ui->dateTimeInput->dateTime().toString("yyyy").toStdString())};
     const int month {std::stoi(ui->dateTimeInput->dateTime().toString("MM").toStdString())};
     const int day {std::stoi(ui->dateTimeInput->dateTime().toString("dd").toStdString())};
@@ -39,10 +41,10 @@ void MainWindow::submit_button_clicked() {
     const int minute {std::stoi(ui->dateTimeInput->dateTime().toString("mm").toStdString())};
     const int second {std::stoi(ui->dateTimeInput->dateTime().toString("ss").toStdString())};
 
-    const Datetime datetime(year, month, day, hour, minute, second, "UTC");
+    const Datetime datetime(year, month, day, hour, minute, second, tz);
 
     Contact new_contact(
-            datetime,
+            datetime.get_timestamp(tz),
             ui->rxCallEntry->text().toStdString(),
             ui->rxRSTEntry->text().toStdString(),
             ui->rxGridEntry->text().toStdString(),
@@ -53,4 +55,6 @@ void MainWindow::submit_button_clicked() {
             ui->postalCodeEntry->text().toStdString(),
             ui->rxCountryEntry->text().toStdString()
             );
+
+    Database::write_qso(new_contact, storage);
 }

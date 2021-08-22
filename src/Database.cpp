@@ -3,6 +3,9 @@
 //
 
 #include "Database.h"
+#include <QStandardPaths>
+#include <filesystem>
+#include <iostream>
 
 void Database::write_qso(Contact &contact, Storage storage) {
     /*
@@ -20,4 +23,26 @@ void Database::flush_db_to_disk(Storage storage) {
      */
 
     storage.sync_schema(true);
+}
+
+Storage Database::get_storage() {
+    /*
+     * Gets the storage object.
+     */
+
+    std::cout << "Initializing storage" << std::endl;
+    return initStorage(get_storage_path());
+}
+
+std::string Database::get_storage_path() {
+    /*
+     * Gets the path to the storage DB.
+     */
+    const std::string dir {QStandardPaths::standardLocations(QStandardPaths::AppDataLocation).at(0).toStdString()};
+    std::string full_path {dir + "/minihamlog.db"};
+    std::filesystem::create_directory(dir);
+
+    std::cout << "Using DB located at: " << full_path << std::endl;
+
+    return full_path;
 }
