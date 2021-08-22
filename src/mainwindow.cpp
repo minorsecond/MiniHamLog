@@ -19,6 +19,39 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     this->setFixedSize(this->width(), this->height());
 
+    // Populate modes dropdown
+    std::set<std::string> modes {
+        "AM",
+        "CW",
+        "MCW",
+        "FM",
+        "D-STAR",
+        "DMR",
+        "FreeDV",
+        "ATV",
+        "SSTV",
+        "AMTOR",
+        "Hell",
+        "MT63",
+        "JT6",
+        "JT65",
+        "Olivia",
+        "Packet",
+        "APRS",
+        "PACTOR",
+        "PSK63",
+        "QPSK31",
+        "QPSK63",
+        "RTTY",
+        "SSB",
+        "PSK31",
+        "FT8"
+    };
+
+    for (const auto& mode : modes) {
+        ui->modeCBox->addItem(QString::fromStdString(mode));
+    }
+
     // Slots
     connect(ui->submitButton, &QPushButton::clicked, this, &MainWindow::submit_button_clicked);
 }
