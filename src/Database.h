@@ -8,7 +8,7 @@
 #include "../include/sqlite_orm.h"
 #include "Contact.h"
 
-inline auto initStorage(const std::string& file_name) {
+inline auto initStorage(const std::string &file_name) {
     /*
      * Initialize the DB
      */

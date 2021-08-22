@@ -39,7 +39,7 @@ void MainWindow::submit_button_clicked() {
     const int minute {std::stoi(ui->dateTimeInput->dateTime().toString("mm").toStdString())};
     const int second {std::stoi(ui->dateTimeInput->dateTime().toString("ss").toStdString())};
 
-    const Datetime datetime(year, month, day, hour, minute, second);
+    const Datetime datetime(year, month, day, hour, minute, second, "UTC");
 
     Contact new_contact(
             datetime,

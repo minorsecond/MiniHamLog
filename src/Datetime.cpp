@@ -5,8 +5,15 @@
 #include "Datetime.h"
 #include "Utilities.h"
 #include <iostream>
+#include <unordered_map>
 
-std::string Datetime::get_timestamp() const {
+std::string Datetime::get_timestamp(std::string tz) const {
+
+    std::unordered_map<std::string, int> timezones {{"UTC", 0}};
+
+    auto it {timezones.begin()};
+
+
     const std::string zp_month {Utilities::zero_pad_integer(2, month)};
     const std::string zp_day {Utilities::zero_pad_integer(2, day)};
     const std::string zp_hour {Utilities::zero_pad_integer(2, hour)};
