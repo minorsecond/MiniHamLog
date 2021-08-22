@@ -3,6 +3,7 @@
 //
 
 #include "Database.h"
+#include "Contact.h"
 #include <QStandardPaths>
 #include <filesystem>
 #include <iostream>
@@ -45,4 +46,13 @@ std::string Database::get_storage_path() {
     std::cout << "Using DB located at: " << full_path << std::endl;
 
     return full_path;
+}
+
+std::vector<Contact> Database::read_rows(Storage storage) {
+    /*
+     * Read all rows from DB
+     * @return: a vector containing all rows
+     */
+
+    return storage.get_all<Contact>();
 }
