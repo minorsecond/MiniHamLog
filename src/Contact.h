@@ -16,6 +16,7 @@ protected:
     std::string their_callsign{};
     std::string their_rst{};
     std::string their_grid{};
+    std::string mode{};
     std::string their_name{};
     std::string their_addy{};
     std::string their_city{};
@@ -29,12 +30,12 @@ protected:
 public:
     Contact();
     Contact(std::string qso_datetime, std::string their_call, std::string their_rst, std::string their_grid,
-            std::string name, std::string addy, std::string city, std::string state, std::string zip,
+            std::string mode, std::string name, std::string addy, std::string city, std::string state, std::string zip,
             std::string country)
         : contact_date{std::move(qso_datetime)}, their_callsign{std::move(their_call)}, their_rst{std::move(their_rst)},
-          their_grid{std::move(their_grid)}, their_name{std::move(name)}, their_addy{std::move(addy)},
-          their_city{std::move(city)}, their_state{std::move(state)}, their_zip{std::move(zip)},
-          their_country{std::move(country)}{};
+          their_grid{std::move(their_grid)}, mode{std::move(mode)}, their_name{std::move(name)},
+          their_addy{std::move(addy)}, their_city{std::move(city)}, their_state{std::move(state)},
+          their_zip{std::move(zip)}, their_country{std::move(country)}{};
     void set_qso_sent(bool status);
     void set_qso_recd(bool status);
     std::string get_datetime(std::string &tz) {return contact_date;};

@@ -81,6 +81,7 @@ void MainWindow::submit_button_clicked() {
             ui->rxCallEntry->text().toStdString(),
             ui->rxRSTEntry->text().toStdString(),
             ui->rxGridEntry->text().toStdString(),
+            ui->modeCBox->currentText().toStdString(),
             ui->rxNameEntry->text().toStdString(),
             ui->rxAddyEntry->text().toStdString(),
             ui->rxCityEntry->text().toStdString(),
