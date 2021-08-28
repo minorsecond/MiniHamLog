@@ -35,7 +35,7 @@ using Storage = decltype (initStorage(""));
 class Database {
 public:
     static Storage get_storage();
-    std::vector<Contact> read_rows(Storage storage);
+    static std::vector<Contact> read_rows(Storage storage);
     static void write_qso(Contact &contact, Storage storage);
     static void flush_db_to_disk(Storage storage);
 

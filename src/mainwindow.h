@@ -22,7 +22,7 @@ public:
     ~MainWindow() override;
 private:
     Ui::MainWindow *ui;
-    std::vector<Contact> read_db_rows();
+    void update_table();
 
 private slots:
     void submit_button_clicked();

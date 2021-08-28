@@ -38,7 +38,7 @@ public:
           their_zip{std::move(zip)}, their_country{std::move(country)}{};
     void set_qso_sent(bool status);
     void set_qso_recd(bool status);
-    std::string get_datetime(std::string &tz) {return contact_date;};
+    std::string get_datetime() const {return contact_date;};
     std::string get_callsign() {return their_callsign;};
     std::string get_rst() {return their_rst;};
     std::string get_grid() {return their_grid;};

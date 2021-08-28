@@ -52,6 +52,8 @@ MainWindow::MainWindow(QWidget *parent)
         ui->modeCBox->addItem(QString::fromStdString(mode));
     }
 
+    update_table();
+
     // Slots
     connect(ui->submitButton, &QPushButton::clicked, this, &MainWindow::submit_button_clicked);
 }
@@ -91,4 +93,26 @@ void MainWindow::submit_button_clicked() {
             );
 
     Database::write_qso(new_contact, storage);
+    update_table();
+}
+
+void MainWindow::update_table() {
+    /*
+     * Updates the main table with rows from the DB
+     */
+
+    std::vector<Contact> all_contacts {};
+    all_contacts = Database::read_rows(storage);
+
+    ui->tableView->setRowCount(0);
+    for (const auto &contact : all_contacts) {
+        int table_row_num {ui->tableView->rowCount()};
+        ui->tableView->insertRow(table_row_num);
+        const std::string date_str {contact.get_datetime()};
+        QDateTime date {QDateTime::fromString(QString::fromStdString(date_str), "yyyyMMddHHmmss")};
+        auto *date_qtw {new QTableWidgetItem};
+        date_qtw->setData(Qt::DisplayRole, date);
+
+        ui->tableView->setItem(table_row_num, 0, date_qtw);
+    }
 }
