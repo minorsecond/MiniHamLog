@@ -31,12 +31,25 @@
             </property>
             <layout class="QGridLayout" name="gridLayout_7">
              <item row="1" column="0">
-              <widget class="QDateTimeEdit" name="dateTimeInput"/>
+              <widget class="QDateEdit" name="qsoDateInput"/>
              </item>
              <item row="0" column="0">
-              <widget class="QLabel" name="label_8">
+              <widget class="QLabel" name="dateLabel">
                <property name="text">
-                <string>QSO Date &amp; Time</string>
+                <string>Date</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QTimeEdit" name="qsoTimeInput"/>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="timeLabel">
+               <property name="text">
+                <string>Time (Local)</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
@@ -370,6 +383,26 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
+ <tabstops>
+  <tabstop>qsoDateInput</tabstop>
+  <tabstop>qsoTimeInput</tabstop>
+  <tabstop>rxCallEntry</tabstop>
+  <tabstop>rxNameEntry</tabstop>
+  <tabstop>qslSentCheck</tabstop>
+  <tabstop>qslRecdCheck</tabstop>
+  <tabstop>modeCBox</tabstop>
+  <tabstop>rxRSTEntry</tabstop>
+  <tabstop>txRSTEdit</tabstop>
+  <tabstop>rxGridEntry</tabstop>
+  <tabstop>rxAddyEntry</tabstop>
+  <tabstop>rxCityEntry</tabstop>
+  <tabstop>rxStateEntry</tabstop>
+  <tabstop>rxCountryEntry</tabstop>
+  <tabstop>postalCodeEntry</tabstop>
+  <tabstop>submitButton</tabstop>
+  <tabstop>deleteButton</tabstop>
+  <tabstop>tableView</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

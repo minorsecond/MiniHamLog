@@ -67,12 +67,12 @@ void MainWindow::submit_button_clicked() {
 
     std::string tz {"UTC"};
 
-    const int year {std::stoi(ui->dateTimeInput->dateTime().toString("yyyy").toStdString())};
-    const int month {std::stoi(ui->dateTimeInput->dateTime().toString("MM").toStdString())};
-    const int day {std::stoi(ui->dateTimeInput->dateTime().toString("dd").toStdString())};
-    const int hour {std::stoi(ui->dateTimeInput->dateTime().toString("hh").toStdString())};
-    const int minute {std::stoi(ui->dateTimeInput->dateTime().toString("mm").toStdString())};
-    const int second {std::stoi(ui->dateTimeInput->dateTime().toString("ss").toStdString())};
+    const int year {std::stoi(ui->qsoDateInput->dateTime().toString("yyyy").toStdString())};
+    const int month {std::stoi(ui->qsoDateInput->dateTime().toString("MM").toStdString())};
+    const int day {std::stoi(ui->qsoDateInput->dateTime().toString("dd").toStdString())};
+    const int hour {std::stoi(ui->qsoTimeInput->dateTime().toString("hh").toStdString())};
+    const int minute {std::stoi(ui->qsoTimeInput->dateTime().toString("mm").toStdString())};
+    const int second {std::stoi(ui->qsoTimeInput->dateTime().toString("ss").toStdString())};
 
     const Datetime datetime(year, month, day, hour, minute, second, tz);
 
