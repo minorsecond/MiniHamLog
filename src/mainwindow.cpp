@@ -22,7 +22,7 @@ MainWindow::MainWindow(QWidget *parent)
     this->setWindowTitle("MiniHamLog");
 
     // Populate modes dropdown
-    std::set<std::string> modes {
+    const std::set<std::string> modes {
         "AM",
         "CW",
         "MCW",
