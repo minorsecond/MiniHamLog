@@ -4,9 +4,7 @@
 
 #include "mainwindow.h"
 #include "../ui/ui_mainwindow.h"
-#include "../src/Datetime.h"
 #include "Contact.h"
-#include <iostream>
 
 MainWindow::MainWindow(QWidget *parent)
 : QMainWindow(parent)
