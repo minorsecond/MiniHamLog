@@ -52,6 +52,8 @@ MainWindow::MainWindow(QWidget *parent)
         ui->modeCBox->addItem(QString::fromStdString(mode));
     }
 
+    // Set table properties
+    ui->tableView->setColumnWidth(0, 125);
     update_table();
 
     // Slots
