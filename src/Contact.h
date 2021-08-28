@@ -23,8 +23,8 @@ protected:
     std::string their_state{};
     std::string their_zip{};
     std::string their_country{};
-    bool qso_sent {false};
-    bool qso_recd {false};
+    bool qsl_sent {false};
+    bool qsl_recd {false};
     size_t id{};
 
 public:
@@ -49,8 +49,8 @@ public:
     std::string get_zip() {return their_zip;};
     std::string get_country() {return their_country;};
     std::string get_full_addy();
-    bool get_qso_sent() const {return qso_sent;};
-    bool get_qso_recd() const {return qso_recd;};
+    bool get_qsl_sent() const {return qsl_sent;};
+    bool get_qsl_recd() const {return qsl_recd;};
 };
 
 

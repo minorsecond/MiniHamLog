@@ -26,8 +26,8 @@ inline auto initStorage(const std::string &file_name) {
                                        sqlite_orm::make_column("their_state", &Contact::their_state),
                                        sqlite_orm::make_column("their_zip", &Contact::their_zip),
                                        sqlite_orm::make_column("their_country", &Contact::their_country),
-                                       sqlite_orm::make_column("qso_sent", &Contact::qso_sent, sqlite_orm::default_value(false)),
-                                       sqlite_orm::make_column("qso_recd", &Contact::qso_recd, sqlite_orm::default_value(false))));
+                                       sqlite_orm::make_column("qsl_sent", &Contact::qsl_sent, sqlite_orm::default_value(false)),
+                                       sqlite_orm::make_column("qsl_recd", &Contact::qsl_recd, sqlite_orm::default_value(false))));
 }
 
 using Storage = decltype (initStorage(""));

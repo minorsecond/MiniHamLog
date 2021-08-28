@@ -9,7 +9,7 @@ void Contact::set_qso_sent(bool status) {
      * Set QSO sent status
      */
 
-    qso_sent = status;
+    qsl_sent = status;
 }
 
 void Contact::set_qso_recd(bool status) {
@@ -17,7 +17,7 @@ void Contact::set_qso_recd(bool status) {
      * Set QSO Received status
      */
 
-    qso_recd = status;
+    qsl_recd = status;
 }
 
 std::string Contact::get_full_addy() {

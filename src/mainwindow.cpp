@@ -53,7 +53,7 @@ MainWindow::MainWindow(QWidget *parent)
     }
 
     // Set table properties
-    ui->tableView->setColumnWidth(0, 125);
+    ui->tableView->setColumnWidth(0, 125);  // Date column
     update_table();
 
     // Slots
