@@ -28,6 +28,7 @@ protected:
     size_t id{};
 
 public:
+    Contact() = default;
     Contact(std::string qso_datetime, std::string their_call, std::string their_rst, std::string their_grid,
             std::string mode, std::string name, std::string addy, std::string city, std::string state, std::string zip,
             std::string country)

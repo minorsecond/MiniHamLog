@@ -4,8 +4,6 @@
 
 #include "Contact.h"
 
-Contact::Contact() = default;
-
 void Contact::set_qso_sent(bool status) {
     /*
      * Set QSO sent status

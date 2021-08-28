@@ -15,9 +15,11 @@ MainWindow::MainWindow(QWidget *parent)
     /*
      * Set up the main window
      */
+
     Database::flush_db_to_disk(storage);
     ui->setupUi(this);
     this->setFixedSize(this->width(), this->height());
+    this->setWindowTitle("MiniHamLog");
 
     // Populate modes dropdown
     std::set<std::string> modes {
