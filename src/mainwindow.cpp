@@ -109,6 +109,8 @@ void MainWindow::update_table() {
     std::vector<Contact> all_contacts {};
     all_contacts = Database::read_rows(storage);
 
+    std::sort(all_contacts.rbegin(), all_contacts.rend());
+
     ui->tableView->setRowCount(0);
     for (const auto &contact : all_contacts) {
         int table_row_num {ui->tableView->rowCount()};

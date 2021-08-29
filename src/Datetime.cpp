@@ -57,9 +57,9 @@ void Datetime::from_std_string(const std::string& datetime_string) {
     year = std::stoi(datetime_string.substr(0, 4));
     month = std::stoi(datetime_string.substr(4, 2));
     day = std::stoi(datetime_string.substr(6, 2));
-    hour = std::stoi(datetime_string.substr(9, 2));
-    minute = std::stoi(datetime_string.substr(12, 2));
-    second = std::stoi(datetime_string.substr(15, 2));
+    hour = std::stoi(datetime_string.substr(8, 2));
+    minute = std::stoi(datetime_string.substr(10, 2));
+    second = std::stoi(datetime_string.substr(12, 2));
 }
 
 Datetime::Datetime() = default;

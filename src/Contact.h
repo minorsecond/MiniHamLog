@@ -10,7 +10,7 @@
 
 class Contact {
     friend auto initStorage(const std::string& file_name);
-
+    friend bool operator<(const Contact &lhs, const Contact &rhs);
 protected:
     size_t id{};
     std::string contact_date{};
