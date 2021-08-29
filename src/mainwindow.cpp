@@ -52,6 +52,9 @@ MainWindow::MainWindow(QWidget *parent)
         ui->modeCBox->addItem(QString::fromStdString(mode));
     }
 
+    ui->qsoDateInput->setDate(QDate::currentDate());
+    ui->qsoTimeInput->setTime(QTime::currentTime());
+
     // Set table properties
     ui->tableView->setColumnWidth(0, 125);  // Date column
     update_table();
