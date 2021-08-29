@@ -12,6 +12,7 @@ class Contact {
     friend auto initStorage(const std::string& file_name);
 
 protected:
+    size_t id{};
     std::string contact_date{};
     std::string their_callsign{};
     std::string their_rst{};
@@ -25,7 +26,6 @@ protected:
     std::string their_country{};
     bool qsl_sent {false};
     bool qsl_recd {false};
-    size_t id{};
 
 public:
     Contact() = default;
@@ -51,6 +51,7 @@ public:
     std::string get_full_addy() const;
     bool get_qsl_sent() const {return qsl_sent;};
     bool get_qsl_recd() const {return qsl_recd;};
+    int get_id() const {return id;};
 };
 
 

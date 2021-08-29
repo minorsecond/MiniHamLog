@@ -106,17 +106,17 @@
              <enum>QFrame::Raised</enum>
             </property>
             <layout class="QGridLayout" name="gridLayout_4">
-             <item row="1" column="0">
-              <widget class="QCheckBox" name="qslRecdCheck">
-               <property name="text">
-                <string>QSL Received</string>
-               </property>
-              </widget>
-             </item>
              <item row="0" column="0">
               <widget class="QCheckBox" name="qslSentCheck">
                <property name="text">
                 <string>QSL Sent</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QCheckBox" name="qslRecdCheck">
+               <property name="text">
+                <string>QSL Received</string>
                </property>
               </widget>
              </item>
@@ -363,6 +363,16 @@
         <column>
          <property name="text">
           <string>QSL Rec</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>id</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>sort</string>
          </property>
         </column>
        </widget>

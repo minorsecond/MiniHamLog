@@ -5,6 +5,7 @@
 #include "mainwindow.h"
 #include "../ui/ui_mainwindow.h"
 #include "Contact.h"
+#include <iostream>
 
 MainWindow::MainWindow(QWidget *parent)
 : QMainWindow(parent)
@@ -55,8 +56,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->qsoDateInput->setDate(QDate::currentDate());
     ui->qsoTimeInput->setTime(QTime::currentTime());
 
-    // Set table properties
-    ui->tableView->setColumnWidth(0, 125);  // Date column
+    configure_table();
     update_table();
 
     // Slots
@@ -116,8 +116,23 @@ void MainWindow::update_table() {
         const std::string date_str {contact.get_datetime()};
         QDateTime date {QDateTime::fromString(QString::fromStdString(date_str), "yyyyMMddHHmmss")};
         auto *date_qtw {new QTableWidgetItem};
+        std::cout << contact.get_id() << std::endl;
+        auto *id {new QTableWidgetItem};
         date_qtw->setData(Qt::DisplayRole, date);
+        id->setData(Qt::DisplayRole, contact.get_id());
 
         ui->tableView->setItem(table_row_num, 0, date_qtw);
+        ui->tableView->setItem(table_row_num, 10, id);
     }
+}
+
+void MainWindow::configure_table() {
+    /*
+     * Set up the table
+     */
+
+    ui->tableView->setColumnWidth(0, 125);  // Date column
+    ui->tableView->setColumnHidden(7, true);  // Zip column
+    ui->tableView->setColumnHidden(10, true);  // ID column
+    ui->tableView->setColumnHidden(11, true);  // Sort column
 }

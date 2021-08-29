@@ -23,6 +23,7 @@ public:
 private:
     Ui::MainWindow *ui;
     void update_table();
+    void configure_table();
 
 private slots:
     void submit_button_clicked();
